@@ -33,7 +33,8 @@ app.post('/posts/:id/comments', async (req, res) => {
     type: 'CommentCreated',
     data: {
       postId: req.params.id,
-      ...commentsByPostId[req.params.id],
+      id,
+      content,
     }
   });
 
